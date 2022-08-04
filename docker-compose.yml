@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres:14.1
+    environment:
+      POSTGRES_USER: finances
+      POSTGRES_PASSWORD: quarkus_dev
+      POSTGRES_DB: finances
+    ports:
+      - "5432:5432"
+
+  adminer:
+    image: adminer
+    ports:
+      - "8081:8080"
