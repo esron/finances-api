@@ -24,9 +24,9 @@ public class IncomeResourceTest {
                 .statusCode(StatusCode.BAD_REQUEST)
                 .contentType(ContentType.JSON)
                 .body("title", equalTo("Constraint Violation"))
-                .body("violations.find { it.field == 'create.income.description' }.message", equalTo("must not be blank"))
-                .body("violations.find { it.field == 'create.income.value' }.message", equalTo("must not be null"))
-                .body("violations.find { it.field == 'create.income.date' }.message", equalTo("invalid date format"));
+                .body("violations.find { it.field == 'add.arg0.description' }.message", equalTo("must not be blank"))
+                .body("violations.find { it.field == 'add.arg0.value' }.message", equalTo("must not be null"))
+                .body("violations.find { it.field == 'add.arg0.date' }.message", equalTo("invalid date format"));
     }
 
     @Test
