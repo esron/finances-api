@@ -1,9 +1,12 @@
 package dev.esron;
 
+import io.quarkus.hibernate.reactive.panache.PanacheEntity;
+
+import javax.persistence.Entity;
 import javax.validation.constraints.*;
 
-public class Income {
-
+@Entity
+public class Income extends PanacheEntity {
     @NotNull
     @NotBlank
     public String description;
